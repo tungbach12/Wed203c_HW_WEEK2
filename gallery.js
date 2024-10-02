@@ -28,3 +28,12 @@ function upDate(previewPic){
         document.getElementById('image').style.backgroundImage="url('')";
        }
        /*Name this external file gallery.css*/
+       function addTabIndex() {
+        let List= document.querySelectorAll('img');
+        for (let i=0;i<List.length;i++) {
+            console.log("index="+i);
+            List[i].setAttribute("tabIndex",0);
+            List[i].addEventListener("blur", unDo);
+        }
+       }
+       addTabIndex;
